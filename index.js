@@ -13,17 +13,8 @@ const postRoute = require("./routes/tweets");
 dotenv.config();
 
 
-const uri = 'mongodb+srv://user:pass@albctwitter.mdaoh.mongodb.net/'+
-'myFirstDatabase?retryWrites=true&w=majority';
-/*
-mongoose.connect(
-  process.env.MONGO_URL,
-  { useNewUrlParser: true, useUnifiedTopology: true },
-  () => {
-    console.log("Connected to MongoDB");
-  }
-);
-*/
+const uri = 'mongodb+srv://user:pass@albctwitter.mdaoh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+
 // Prints "MongoServerError: bad auth Authentication failed."
 mongoose.connect(uri, {
   serverSelectionTimeoutMS: 5000
